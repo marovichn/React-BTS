@@ -12,7 +12,7 @@ function App() {
 
   const handler = useCallback(() => {
     if (allowP) {
-      setShowP((prev) => !showP);
+      setShowP((prev) => !prev);
     }
   }, [showP, allowP]);
 
