@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./components/Button/Button";
 
 import "./App.css";
+import DemoOutput from "./components/Button/Demo/DemoOutput";
 
 function App() {
   const [showP, setShowP] = useState(false);
@@ -17,7 +18,7 @@ function App() {
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      {showP && <p>This is new</p>}
+      <DemoOutput show={showP}></DemoOutput>
       <Button onClick={handler}>{showP ? "Remove" : "Add"} paragraph</Button>
     </div>
   );
